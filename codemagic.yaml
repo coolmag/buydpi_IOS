@@ -7,40 +7,11 @@ workflows:
       xcode: 15.2
       cocoapods: default
     scripts:
-      - name: Initialize submodules
+      - name: List available Xcode versions
         script: |
-          git submodule update --init --recursive
-
-      - name: Build and Archive iOS App (for Sideloading/Development)
-        script: |
-          xcodebuild -project SwByeDPI.xcodeproj -scheme ByeByeDPI -destination 'generic/platform=iOS' -archivePath build/ByeDPI.xcarchive archive \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_ENTITLEMENTS=NO \
-            DEVELOPMENT_TEAM="" \
-            ENABLE_BITCODE=NO
-
-      - name: Export IPA (for Sideloading/Development)
-        script: |
-          cat << EOF > exportOptions.plist
-          <?xml version="1.0" encoding="UTF-8"?>
-          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-          <plist version="1.0">
-          <dict>
-              <key>method</key>
-              <string>development</string>
-              <key>signingStyle</key>
-              <string>automatic</string>
-              <key>stripSwiftSymbols</key>
-              <true/>
-              <key>compileBitcode</key>
-              <false/>
-          </dict>
-          </plist>
-          EOF
-
-          xcodebuild -exportArchive -archivePath build/ByeDPI.xcarchive -exportOptionsPlist exportOptions.plist -exportPath build/ipa
-
+          echo "Listing available Xcode versions..."
+          ls /Applications/ | grep Xcode
+          echo "Please copy the list above and paste it back to the agent."
     artifacts:
       - build/ipa/*.ipa
 
