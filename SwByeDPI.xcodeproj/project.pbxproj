@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B09F8692F7A672E0065FB4D /* ByeByeDPITun.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8BB4205C2F73FEE6005C2F2B /* ByeByeDPITun.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8B2BF7B92F4DFB9D0016A26B /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8B2BF7B82F4DFB9D0016A26B /* RswiftLibrary */; };
 		8B3AF57C2F6DCEDE0085E8BC /* SwByeDPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD891882F3A1A750020D925 /* SwByeDPI.framework */; };
 		8B3AF57D2F6DCEDE0085E8BC /* SwByeDPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD891882F3A1A750020D925 /* SwByeDPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8B3AF5822F6DCEE80085E8BC /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8B3AF5812F6DCEE80085E8BC /* RswiftLibrary */; };
 		8B3AF5842F6DCEEF0085E8BC /* TextFieldAlert in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, maccatalyst, tvos, ); productRef = 8B3AF5832F6DCEEF0085E8BC /* TextFieldAlert */; };
 		8B3B63EB2F597F94005BA55B /* TextFieldAlert in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, maccatalyst, tvos, ); productRef = 8B3B63EA2F597F94005BA55B /* TextFieldAlert */; };
 		8B62D5C22F87FB3300DF6F8C /* libByeDPICLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B62D5A42F87ECAB00DF6F8C /* libByeDPICLib.a */; };
@@ -19,7 +17,6 @@
 		8B62D5CB2F880A0A00DF6F8C /* libByeDPIKitLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B62D5BB2F87FA9500DF6F8C /* libByeDPIKitLib.a */; };
 		8B62D5DE2F88186300DF6F8C /* libByeDPIKitLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B62D5BB2F87FA9500DF6F8C /* libByeDPIKitLib.a */; };
 		8BA5E1C92F7108D700F47B9C /* SwByeDPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD891882F3A1A750020D925 /* SwByeDPI.framework */; };
-		8BA5E1CA2F7108D700F47B9C /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA5E1C22F7108D700F47B9C /* RswiftLibrary */; };
 		8BA5E1CF2F7108D700F47B9C /* SwByeDPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD891882F3A1A750020D925 /* SwByeDPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8BA6AC132F3A706D00999BF6 /* SwByeDPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD891882F3A1A750020D925 /* SwByeDPI.framework */; };
 		8BB4205E2F73FEE6005C2F2B /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB4205D2F73FEE6005C2F2B /* NetworkExtension.framework */; };
@@ -569,7 +566,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3AF57C2F6DCEDE0085E8BC /* SwByeDPI.framework in Frameworks */,
-				8B3AF5822F6DCEE80085E8BC /* RswiftLibrary in Frameworks */,
 				8B3AF5842F6DCEEF0085E8BC /* TextFieldAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,7 +597,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA5E1C92F7108D700F47B9C /* SwByeDPI.framework in Frameworks */,
-				8BA5E1CA2F7108D700F47B9C /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,11 +758,9 @@
 			);
 			dependencies = (
 				8B3AF5722F6DCDF50085E8BC /* PBXTargetDependency */,
-				8B3AF56E2F6DCDEB0085E8BC /* PBXTargetDependency */,
 			);
 			name = ByeDPI;
 			packageProductDependencies = (
-				8B3AF5812F6DCEE80085E8BC /* RswiftLibrary */,
 				8B3AF5832F6DCEEF0085E8BC /* TextFieldAlert */,
 			);
 			productName = ByeByeDPIProxy;
@@ -847,11 +840,9 @@
 			);
 			dependencies = (
 				8BA5E1BF2F7108D700F47B9C /* PBXTargetDependency */,
-				8BA5E1C12F7108D700F47B9C /* PBXTargetDependency */,
 			);
 			name = ByeDPImacOS;
 			packageProductDependencies = (
-				8BA5E1C22F7108D700F47B9C /* RswiftLibrary */,
 			);
 			productName = ByeByeDPIProxy;
 			productReference = 8BA5E1D32F7108D700F47B9C /* ByeDPImacOS.app */;
@@ -1189,18 +1180,10 @@
 			target = 8BB4205B2F73FEE6005C2F2B /* ByeByeDPITun */;
 			targetProxy = 8B09F86A2F7A672E0065FB4D /* PBXContainerItemProxy */;
 		};
-		8B3AF56E2F6DCDEB0085E8BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 8B3AF56D2F6DCDEB0085E8BC /* RswiftGenerateInternalResources */;
-		};
 		8B3AF5722F6DCDF50085E8BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8BD891872F3A1A750020D925 /* SwByeDPI */;
 			targetProxy = 8B3AF5712F6DCDF50085E8BC /* PBXContainerItemProxy */;
-		};
-		8B52DB1F2F62A683009BE7C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 8B52DB1E2F62A683009BE7C3 /* RswiftGenerateInternalResources */;
 		};
 		8B62D5C42F87FB3300DF6F8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1226,10 +1209,6 @@
 			isa = PBXTargetDependency;
 			target = 8BD891872F3A1A750020D925 /* SwByeDPI */;
 			targetProxy = 8BA5E1C02F7108D700F47B9C /* PBXContainerItemProxy */;
-		};
-		8BA5E1C12F7108D700F47B9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 8B3AF56D2F6DCDEB0085E8BC /* RswiftGenerateInternalResources */;
 		};
 		8BA6AC152F3A706D00999BF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2313,161 +2292,10 @@
 		};
 /* End XCBuildConfiguration section */
 
-/* Begin XCConfigurationList section */
-		8B2BF7A22F4DF9B40016A26B /* Build configuration list for PBXNativeTarget "ByeByeDPI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B2BF7A32F4DF9B40016A26B /* Debug */,
-				8B2BF7A42F4DF9B40016A26B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B3AF5692F6DCCD20085E8BC /* Build configuration list for PBXNativeTarget "ByeDPI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B3AF56A2F6DCCD20085E8BC /* Debug */,
-				8B3AF56B2F6DCCD20085E8BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B62D5AB2F87ECAB00DF6F8C /* Build configuration list for PBXNativeTarget "ByeDPICLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B62D5AC2F87ECAB00DF6F8C /* Debug */,
-				8B62D5AD2F87ECAB00DF6F8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B62D5BF2F87FA9500DF6F8C /* Build configuration list for PBXNativeTarget "ByeDPIKitLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B62D5C02F87FA9500DF6F8C /* Debug */,
-				8B62D5C12F87FA9500DF6F8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B8F7A192F4799180015A52A /* Build configuration list for PBXNativeTarget "ByeDPIC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B8F7A1A2F4799180015A52A /* Debug */,
-				8B8F7A1B2F4799180015A52A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BA5E1D02F7108D700F47B9C /* Build configuration list for PBXNativeTarget "ByeDPImacOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BA5E1D12F7108D700F47B9C /* Debug */,
-				8BA5E1D22F7108D700F47B9C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BA6AC162F3A706D00999BF6 /* Build configuration list for PBXNativeTarget "SwByeDPITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BA6AC172F3A706D00999BF6 /* Debug */,
-				8BA6AC182F3A706D00999BF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BB420672F73FEE6005C2F2B /* Build configuration list for PBXNativeTarget "ByeByeDPITun" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BB420682F73FEE6005C2F2B /* Debug */,
-				8BB420692F73FEE6005C2F2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BBA5FB42F67D3B40092E52A /* Build configuration list for PBXNativeTarget "ByeDPIKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BBA5FB52F67D3B40092E52A /* Debug */,
-				8BBA5FB62F67D3B40092E52A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BBA5FB72F67D3B40092E52A /* Build configuration list for PBXNativeTarget "ByeDPIKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BBA5FB82F67D3B40092E52A /* Debug */,
-				8BBA5FB92F67D3B40092E52A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BD891822F3A1A750020D925 /* Build configuration list for PBXProject "SwByeDPI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BD891912F3A1A750020D925 /* Debug */,
-				8BD891922F3A1A750020D925 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BD8918E2F3A1A750020D925 /* Build configuration list for PBXNativeTarget "SwByeDPI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BD8918F2F3A1A750020D925 /* Debug */,
-				8BD891902F3A1A750020D925 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
 /* Begin XCRemoteSwiftPackageReference section */
-
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mac-cain13/R.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.8.0;
-			};
-		};
-		8B3B63E92F597F94005BA55B /* XCRemoteSwiftPackageReference "TextFieldAlert" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sochalewski/TextFieldAlert";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
-			};
-		};
-
-		8BB420722F73FFB1005C2F2B /* XCRemoteSwiftPackageReference "Tun2SocksKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/EbrahimTahernejad/Tun2SocksKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.14.4;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-
-			isa = XCSwiftPackageProductDependency;
-			package = 8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */;
-			productName = RswiftLibrary;
-		};
-		8B3AF56D2F6DCDEB0085E8BC /* RswiftGenerateInternalResources */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */;
-			productName = "plugin:RswiftGenerateInternalResources";
-		};
-		8B3AF5812F6DCEE80085E8BC /* RswiftLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */;
-			productName = RswiftLibrary;
-		};
 		8B3AF5832F6DCEEF0085E8BC /* TextFieldAlert */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8B3B63E92F597F94005BA55B /* XCRemoteSwiftPackageReference "TextFieldAlert" */;
@@ -2477,16 +2305,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B3B63E92F597F94005BA55B /* XCRemoteSwiftPackageReference "TextFieldAlert" */;
 			productName = TextFieldAlert;
-		};
-		8B52DB1E2F62A683009BE7C3 /* RswiftGenerateInternalResources */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */;
-			productName = "plugin:RswiftGenerateInternalResources";
-		};
-		8BA5E1C22F7108D700F47B9C /* RswiftLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8BA5E1C32F7108D700F47B9C /* XCRemoteSwiftPackageReference "R" */;
-			productName = RswiftLibrary;
 		};
 		8BB420732F73FFB1005C2F2B /* Tun2SocksKit */ = {
 			isa = XCSwiftPackageProductDependency;
