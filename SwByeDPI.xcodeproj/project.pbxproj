@@ -560,7 +560,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BBA638B2F6835F40092E52A /* SwByeDPI.framework in Frameworks */,
-				8B2BF7B92F4DFB9D0016A26B /* RswiftLibrary in Frameworks */,
 				8B3B63EB2F597F94005BA55B /* TextFieldAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,13 +739,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				8B52DB1F2F62A683009BE7C3 /* PBXTargetDependency */,
 				8BBA638E2F6835F40092E52A /* PBXTargetDependency */,
 				8B09F86B2F7A672E0065FB4D /* PBXTargetDependency */,
 			);
 			name = ByeByeDPI;
 			packageProductDependencies = (
-				8B2BF7B82F4DFB9D0016A26B /* RswiftLibrary */,
 				8B3B63EA2F597F94005BA55B /* TextFieldAlert */,
 			);
 			productName = "ByeDPI-iOS";
@@ -1017,7 +1014,6 @@
 			mainGroup = 8BD8917E2F3A1A750020D925;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */,
 				8B3B63E92F597F94005BA55B /* XCRemoteSwiftPackageReference "TextFieldAlert" */,
 				8BB420722F73FFB1005C2F2B /* XCRemoteSwiftPackageReference "Tun2SocksKit" */,
 			);
@@ -2429,7 +2425,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */ = {
+
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
 			requirement = {
@@ -2445,14 +2441,7 @@
 				minimumVersion = 1.4.0;
 			};
 		};
-		8BA5E1C32F7108D700F47B9C /* XCRemoteSwiftPackageReference "R" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mac-cain13/R.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.8.0;
-			};
-		};
+
 		8BB420722F73FFB1005C2F2B /* XCRemoteSwiftPackageReference "Tun2SocksKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/EbrahimTahernejad/Tun2SocksKit";
@@ -2464,7 +2453,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8B2BF7B82F4DFB9D0016A26B /* RswiftLibrary */ = {
+
 			isa = XCSwiftPackageProductDependency;
 			package = 8B2BF7B72F4DFB9D0016A26B /* XCRemoteSwiftPackageReference "R" */;
 			productName = RswiftLibrary;
