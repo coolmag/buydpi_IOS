@@ -4,7 +4,7 @@ workflows:
     name: Build SwByeDPI iOS App
     instance_type: mac_mini_m1
     environment:
-      xcode: 15.2
+      xcode: latest
       cocoapods: default
     scripts:
       - name: List available Xcode versions
