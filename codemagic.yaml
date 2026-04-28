@@ -4,7 +4,7 @@ workflows:
     name: Build SwByeDPI iOS App
     instance_type: mac_mini_m1
     environment:
-      xcode: 15
+      xcode: 15.2
       cocoapods: default
     scripts:
       - name: Initialize submodules
