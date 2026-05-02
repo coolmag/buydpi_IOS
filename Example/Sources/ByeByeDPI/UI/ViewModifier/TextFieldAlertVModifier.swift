@@ -29,7 +29,7 @@ struct UniversalTextFieldAlert: ViewModifier {
         content.textFieldAlert(title: title, textFields: [
             TextFieldAlert.TextField(text: $tfValue, placeholder: placeholder, isSecureTextEntry: false, autocapitalizationType: autocapitalizationType.UIKitAdaptedValue, autocorrectionType: .default, keyboardType: keyboardType.UIKitAdaptedValue)
         ], actions: [
-            TextFieldAlert.Action(title: R.string.localizable.generalCancel(), style: .cancel, isEnabled: Binding(get: {
+            TextFieldAlert.Action(title: R.string.localizable.generalCancel, style: .cancel, isEnabled: Binding(get: {
                 return true
             }, set: { newVal in
                 
@@ -37,7 +37,7 @@ struct UniversalTextFieldAlert: ViewModifier {
                 onCancel()
                 isPresented = false
             }),
-            TextFieldAlert.Action(title: R.string.localizable.generalDone(), style: .default, isEnabled: Binding(get: {
+            TextFieldAlert.Action(title: R.string.localizable.generalDone, style: .default, isEnabled: Binding(get: {
                 if (tfValue.isEmpty) {
                     return false
                 }

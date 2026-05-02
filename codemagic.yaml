@@ -10,18 +10,29 @@ workflows:
       - name: Initialize submodules
         script: |
           git submodule update --init --recursive
+      - name: "Remove corrupted xcodeproj to force SPM build"
+        script: |
+          rm -rf SwByeDPI.xcodeproj
           
       - name: Build and Archive iOS App (for Sideloading/Development)
         script: |
-          xcodebuild -project SwByeDPI.xcodeproj -scheme ByeByeDPI -destination 'generic/platform=iOS' -archivePath build/ByeDPI.xcarchive archive \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_ENTITLEMENTS=NO \
-            DEVELOPMENT_TEAM="" \
+          # Change to the directory where the scheme is defined
+          cd Example
+          
+          # Run the build command, adjusting archive path
+          xcodebuild -scheme ByeByeDPI -destination 'generic/platform=iOS' -archivePath ../build/ByeDPI.xcarchive archive -verbose 
+            CODE_SIGN_IDENTITY="-" 
+            CODE_SIGNING_REQUIRED=NO 
+            CODE_SIGN_ENTITLEMENTS=NO 
+            DEVELOPMENT_TEAM="" 
             ENABLE_BITCODE=NO
             
       - name: Export IPA (for Sideloading/Development)
         script: |
+          # The archive is in the root build folder
+          xcodebuild -exportArchive -archivePath build/ByeDPI.xcarchive -exportOptionsPlist exportOptions.plist -exportPath build/ipa
+
+          # The exportOptions.plist should also be created at the root
           cat << EOF > exportOptions.plist
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -38,9 +49,6 @@ workflows:
           </dict>
           </plist>
           EOF
-
-          xcodebuild -exportArchive -archivePath build/ByeDPI.xcarchive -exportOptionsPlist exportOptions.plist -exportPath build/ipa
           
     artifacts:
       - build/ipa/*.ipa
-

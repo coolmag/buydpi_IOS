@@ -36,8 +36,8 @@ let package = Package(
         .target(name: "ByeByeDPI", dependencies: [
             .product(name: "TextFieldAlert", package: "TextFieldAlert"),
             .product(name: "RswiftLibrary", package: "R.swift"),
-            .product(name: "ByeDPIKit", package: "SwByeDPI"),
-            .product(name: "SwByeDPI", package: "SwByeDPI")
+            .product(name: "ByeDPIKit", package: "clone"),
+            .product(name: "SwByeDPI", package: "clone")
         ], exclude: BBDExcludeIOS, resources: [.copy("PrivacyInfo.xcprivacy")], linkerSettings: [
             .linkedFramework("CoreFoundation"),
             .linkedFramework("NetworkExtension")
@@ -45,7 +45,7 @@ let package = Package(
             .plugin(name: "RswiftGenerateInternalResources", package: "R.swift")
         ]),
         .target(name: "ByeByeDPITun", dependencies: [
-            .product(name: "ByeDPIKit", package: "SwByeDPI"),
+            .product(name: "ByeDPIKit", package: "clone"),
             .product(name: "Tun2SocksKit", package: "Tun2SocksKit"),
         ], linkerSettings: [
             .linkedFramework("CoreFoundation"),

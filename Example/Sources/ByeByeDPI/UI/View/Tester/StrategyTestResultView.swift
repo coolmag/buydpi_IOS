@@ -72,7 +72,7 @@ struct StrategyTestResultView: View {
             } label: {
                 Text(_strategyCmdLine)
                     .foregroundColor(Color(R.color.grPrimary))
-                    .underline(true, color: Color(R.color.grAccent))
+                    .underline(true, color: Color(uiColor: R.color.grAccent ?? .systemBlue))
                     .multilineTextAlignment(.leading)
             }
     #if !os(tvOS)
@@ -109,7 +109,7 @@ struct StrategyTestResultView: View {
                 Text(_formattedStrategyTestProgressInfo)
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(R.color.grSecondary))
+                    .foregroundColor(Color(uiColor: R.color.grSecondary ?? .systemGray))
             }
 #if os(tvOS)
             Button {
@@ -155,7 +155,7 @@ struct StrategyTestResultView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 8))
-        .background(Color(R.color.bgSecondary))
+        .background(Color(uiColor: R.color.bgSecondary ?? .systemGroupedBackground))
         .cornerRadius(12.0)
     }
 }

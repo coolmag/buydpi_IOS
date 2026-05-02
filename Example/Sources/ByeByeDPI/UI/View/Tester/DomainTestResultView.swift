@@ -28,9 +28,9 @@ struct DomainTestResultView: View {
     }
     
     var body: some View {
-        var fgColor = Color(R.color.grSecondary)
+        var fgColor = Color(uiColor: R.color.grSecondary ?? .gray)
         if (_successTest) {
-            fgColor = Color(R.color.grPositive)
+            fgColor = Color.green
         }
         return HStack(alignment: .center, spacing: .zero) {
             Text(_domain)
